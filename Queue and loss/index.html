@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- Source https://computerscience.unicam.it/marcantoni/reti/applet/QueuingAndLossInteractive/1.html -->
+<html lang="en">
+<head>
+    <title>Minh họa về Hàng đợi và Mất gói</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=0, minimal-ui">
+    <style type="text/css">
+        .container {
+            min-width: 600px;
+            height: 300px;
+            max-width: 700px;
+            position: relative;
+            box-sizing: border-box;
+            margin-left: 50px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none
+        }
+
+        .startButton {
+            margin-right: 4px
+        }
+
+        .resetButton,
+        .startButton {
+            float: left;
+            margin-left: 4px
+        }
+
+        .combobox {
+            float: left;
+            margin-right: 5px;
+            width: 110px
+        }
+
+        button {
+            width: 70px
+        }
+
+        .comboboxLabel {
+            float: left;
+            margin-right: 10px;
+            font-size: 80%;
+            line-height: 25px;
+            height: 25px
+        }
+
+        .simulation {
+            margin: 20px
+        }
+
+        .point,
+        .simulation {
+            display: inline-block
+        }
+
+        .point {
+            width: 40px;
+            height: 40px;
+            background: blue;
+            border-radius: 5px
+        }
+
+        .propagationSpeed {
+            margin: 0 auto;
+            text-align: center;
+            margin-top: -14px
+        }
+
+        .time {
+            display: inline-block
+        }
+
+        .droppedText,
+        .time {
+            font-size: 80%;
+            color: purple
+        }
+
+        .droppedText {
+            display: block
+        }
+
+        .queue {
+            display: inline-block;
+            float: left
+        }
+
+        .queueEl {
+            width: 10px;
+            height: 60px
+        }
+
+        .dropper,
+        .queueEl {
+            display: inline-block;
+            border: 1px solid #000;
+            margin-left: -1px
+        }
+
+        .dropper {
+            float: left;
+            width: 40px;
+            height: 35px;
+            margin-top: 13px
+        }
+
+        .chanel {
+            width: 190px;
+            height: 15px;
+            border: 1px solid #000;
+            margin-top: 23.5px;
+            margin-left: -1px;
+            overflow: hidden
+        }
+
+        .chanel,
+        .packet {
+            display: inline-block;
+            float: left
+        }
+
+        .outPacket,
+        .packet {
+            width: 20px;
+            background-color: red;
+            height: 15.5px;
+            margin-top: 0;
+            margin-left: -20px
+        }
+
+        .droppedPacket,
+        .outPacket {
+            float: left;
+            display: inline-block
+        }
+
+        .droppedPacket {
+            width: 15.5px;
+            background-color: red;
+            height: 15.5px;
+            margin-top: 41px;
+            margin-left: -360px
+        }
+    </style>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif
+        }
+
+        .header,
+        h1 {
+            color: #101027;
+            font-size: 200%;
+            font-weight: 400;
+            margin: .67em 0
+        }
+
+        .focusable,
+        canvas {
+            border: 3px solid transparent
+        }
+
+        .focusable:focus,
+        button:focus,
+        canvas:focus {
+            outline: none;
+            border: 3px dotted #000
+        }
+
+        .text,
+        p {
+            font-size: 100%;
+            margin: 1em 0
+        }
+
+        button {
+            font-size: 80%;
+            height: 25px;
+            background: linear-gradient(#fff, #f0f0f0);
+            border: 1px solid #adadad;
+            box-sizing: border-box
+        }
+
+        button:disabled {
+            background: #d3d3d3;
+            border: 1px solid #bcbcbc
+        }
+
+        button::-moz-focus-inner {
+            border: 0
+        }
+
+        .navigation {
+            width: 0;
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden
+        }
+    </style>
+    <style type="text/css">
+        .combobox {
+            height: 25px;
+            font-size: 90%
+        }
+
+        .combobox:focus {
+            outline: none;
+            border: 3px dotted #000
+        }
+    </style>
+<body>
+</body>
+<script type="text/javascript" src="java.js"></script>
+</html>
